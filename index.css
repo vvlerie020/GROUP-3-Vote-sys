@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("/image/background.png");
+    background-size: cover;
+     background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0;
+     height: 115vh;        /* full screen height */
+    overflow: hidden; 
+}
+
+.container {
+    margin-top: 0;   /* remove extra space */
+    padding-top: 120px; /* keeps content centered nicely */
+    min-height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.candidates {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.candidate {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.candidate:hover {
+    transform: scale(1.05);
+}
+
+.candidate.selected {
+    border: 4px solid #28a745;
+    transform: scale(1.08);
+}
+
+.candidate img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.action-btn {
+    padding: 10px 25px;
+    margin: 20px;
+    border: none;
+    background-color: #807a71;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    
+}
+.voting-bg {
+    background-image: url("/image/vote.png");
+}
+#homePage .action-btn {
+    margin-top: 430px;  /* adjust this value */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+<!-- HOME PAGE -->
+<div id="homePage" class="container show">
+  
+    <button class="action-btn" onclick="startVoting()">Start Voting</button>
+</div>
+
+<!-- VOTING PAGE -->
+<div id="votingPage" class="container hidden">
+    <h2 id="roundTitle"></h2>
+
+    <div class="candidates">
+        <div class="candidate" id="leftCard" onclick="selectCandidate('left')">
+            <img id="leftImage">
+            <h3 id="leftName"></h3>
+        </div>
+
+        <div class="candidate" id="rightCard" onclick="selectCandidate('right')">
+            <img id="rightImage">
+            <h3 id="rightName"></h3>
+        </div>
+    </div>
+
+    <button class="action-btn" onclick="nextRound()">Submit</button>
+</div>
+
+<!-- DONE PAGE -->
+<div id="donePage" class="container hidden">
+    <button class="action-btn" onclick="showTally()">View Tally of Votes</button>
+</div>
+
+<!-- RESULT PAGE -->
+<div id="resultPage" class="container hidden">
+    <h1>Final Tally</h1>
+    <div id="results"></div>
+</div>
+<script src="first.js"></script>
+</body>
+</html>
